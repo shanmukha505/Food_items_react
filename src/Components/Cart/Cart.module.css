@@ -1,0 +1,66 @@
+.Cart{
+
+	background-color: #eee;
+	margin-top: 2%;
+	box-sizing: border-box;
+	border-radius: 7px;
+
+}
+
+.Nocart{
+	display: flex;
+	height: 90%;
+	align-items: center;
+	justify-content: center;
+}
+
+.Cart h3{
+	padding-top: 2%;
+}
+
+.Item{
+	display: flex;
+	align-items: flex-start;
+	flex-shrink: 4;
+
+
+}
+.Item .Name{
+	width: 35%;
+	padding: 1%;
+}
+
+.Item .Cost{
+	width: 15%;
+	padding: 1%;
+	text-align: center;
+
+}
+.Item .Qnt{
+	width: 25%;
+	padding: 1%;
+	text-align: center;
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
+.Item .Total{
+	text-align: center;
+	width: 25%;
+	padding: 1%;
+
+}
+
+.Item .Qnt div button{
+	text-decoration: none;
+	color: #000;
+	border: none;
+	outline: none;
+
+}
+
+.Item .Qnt div button:active{
+	font-weight: bold;
+	border: 1px solid #222;
+}

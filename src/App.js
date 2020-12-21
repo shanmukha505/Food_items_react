@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import style from './App.module.css';
+import Login from './Components/Login/Login';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Shopping from './Components/Shopping/Shopping';
+
+import Cart from './Components/Cart/Cart';
+
+import Navigation from './Components/Navigation/Navigation';
+
+import { Route } from 'react-router-dom';
+
+
+const App = () =>{
+
+	const [user, setuser] = useState('User');
+	  
+    return (
+      <div className={style.App} >
+
+      		<Route exact path="/" component={(props) => <Login setuser={setuser} />} />
+
+	        <Route path="/shopping"
+	        	   component = {(props) => 
+	        	   	<>
+	        	   		<Navigation user={user} />
+	        	   		<Shopping />
+	        	   	</> } />
+
+	        <Route path="/cart"
+	               component = {(props) => 
+	               	<>
+	               		<Navigation user={user} />
+	               		<Cart />
+	               	</> } /> 
+      </div>
+    );
+
 }
 
 export default App;

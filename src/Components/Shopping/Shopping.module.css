@@ -1,0 +1,19 @@
+.Shopping{
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2%;
+}
+
+.Shopping img{
+	width: 85%;
+	height: 85%;
+}
+
+.Row p{
+	color: crimson;
+	font-size: larger;
+}
