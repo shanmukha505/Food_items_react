@@ -1,22 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
-import { Provider } from 'react-redux';
-import store from './Components/Data';
-
-import { HashRouter as Router } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.css";
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { HashRouter as Router } from "react-router-dom";
+import App from "./App";
+import store from "./Components/Data";
+import "./index.css";
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <Router>
-  	<Provider store={store}>
-    	<App />
+    <Provider store={store}>
+      <App />
     </Provider>
   </Router>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
