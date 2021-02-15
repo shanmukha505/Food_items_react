@@ -25,7 +25,8 @@ const Shopping = (props) => {
     return (
       <Row style={row} key={item.name} className={style.Row}>
         <Col sm={4}>
-          <Image src={item.src} rounded />
+          <Image src={item.src.default} rounded />
+          {console.log(item.src)}
         </Col>
 
         <Col sm={8}>
